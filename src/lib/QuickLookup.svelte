@@ -6,7 +6,7 @@
         const [bookChapter,verse] = searchQuery.split(':');
         const [book,chapter] = bookChapter.split(' ');
         const verseQuery = (verse)? "?verse=" + verse : '';
-        goto(`/${translation}/${book}/${chapter? chapter : 1}${verseQuery}`);
+        goto(`/Bible/${translation}/${book}/${chapter? chapter : 1}${verseQuery}`);
         searchQuery = '';
     }
 

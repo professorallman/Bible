@@ -7,52 +7,18 @@ async function getDb(fetch){
     let SQL;
     if(browser){
         SQL = await initSqlJs({
-            locateFile:(file)=>`/${file}`
+            locateFile:(file)=>`/Bible/${file}`
         });
     }else{
         SQL = await initSqlJs();
     }
-    const data = await fetch('/bible.sqlite3').then(r=>r.arrayBuffer());
+    const data = await fetch('/Bible/bible.sqlite3').then(r=>r.arrayBuffer());
     db = new SQL.Database(new Uint8Array(data));
     return db;
 }
 function allRowsAsArray(queryResult){
     return [...queryResult.values()][0].values.map(v=>v[0]);
 }
-async function loadTranslations(fetch){
-    const db = await getDb(fetch);
-    let translations = allRowsAsArray(db.exec('SELECT translation FROM available_translations'));
-    return translations;
-}
-async function loadBooks(fetch){
-    const db = await getDb(fetch);
-    let books = allRowsAsArray(db.exec('SELECT name FROM books'));
-    return books;
-}
-async function loadBookId(fetch,bookName){
-    const db = await getDb(fetch);
-    const statement = db.prepare('SELECT id FROM books WHERE name=:bookName');
-    const result = statement.getAsObject({':bookName':bookName});
-    return result.id;
-}
-//SELECT chapter FROM chapters LEFT JOIN books ON books.id=chapters.book_id WHERE name='Genesis' ORDER BY chapter
-async function loadChaptersForBook(fetch,bookId){
-    const db = await getDb(fetch);
-    const statement = db.prepare("SELECT id,chapter FROM chapters WHERE book_id=:bookId ORDER BY chapter");
-    statement.bind({':bookId':bookId});
-    const chapters = [];
-    while(statement.step()){
-        const [id,chapter] = statement.get();
-        chapters.push({id,chapter});
-    }
-    return chapters;
-}
-async function loadVerses(fetch,translation,book_id,chapterId){
-    const db = await getDb(fetch);
-    const translationStatement = db.prepare('SELECT translation FROM available_translations WHERE translation=:translation');
-    const translationResult = translationStatement.getAsObject({':translation':translation});
-}
-
 class Bible{
     constructor(db,options){
         this._db = db;
@@ -179,4 +145,4 @@ async function bibleInstance(fetch,options){
     const bible = new Bible(db,options);
     return bible;
 }
-export {bibleInstance, loadTranslations,loadBookId, loadBooks,loadChaptersForBook};
+export {bibleInstance};

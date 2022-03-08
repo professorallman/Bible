@@ -15,8 +15,7 @@
     }
 </script>
 <script>
-    import { goto } from '$app/navigation';
-    import { onMount } from 'svelte';
+    import { goto,afterNavigate } from '$app/navigation';
     import { page } from '$app/stores';
     export let translation;
     export let book;
@@ -24,7 +23,7 @@
     export let verses = [];
     let verseQuery = '';
     let startVerse,endVerse;
-    onMount(()=>{
+    afterNavigate(()=>{
         verseQuery = ($page.url.searchParams.get('verse') || '').split('-');
         if(verseQuery[0] == ''){
             startVerse = verses[0].verse_number;
@@ -38,7 +37,7 @@
         }
     });
     function readFullChapter(){
-        const toGoto = `/${translation}/${book}/${chapter}#${startVerse}`;
+        const toGoto = `/Bible/${translation}/${book}/${chapter}#${startVerse}`;
         startVerse = verses[0].verse_number;
         endVerse = verses[verses.length - 1].verse_number;
         verseQuery = ''
@@ -87,10 +86,10 @@
 
 <nav>
     <ul>
-        <li><a href="/{translation}">{book}</li>
-        <li><a href="/{translation}/{book}">{chapter}</li>
+        <li><a href="/Bible/{translation}">{book}</li>
+        <li><a href="/Bible/{translation}/{book}">{chapter}</li>
         <li>
-            <a href="/{translation}/{book}/{chapter}/verses">
+            <a href="/Bible/{translation}/{book}/{chapter}/verses">
                 {#if verseQuery != ''}
                     {startVerse}{(startVerse == endVerse)? '' : `-${endVerse}`}
                 {:else}

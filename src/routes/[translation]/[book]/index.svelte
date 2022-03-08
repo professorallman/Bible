@@ -44,7 +44,7 @@ import LinkCard from "$lib/LinkCard.svelte";
 <ol>
     {#each chapters as chapter}
     <li value={chapter}>
-        <LinkCard href="/{translation}/{book}/{chapter}" text={chapter}/>
+        <LinkCard href="/Bible/{translation}/{book}/{chapter}" text={chapter}/>
     </li>
  {/each}
 

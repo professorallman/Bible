@@ -75,7 +75,7 @@ import LinkCard from "$lib/LinkCard.svelte";
     </header>
     <div>
         {#each displayBook as book}
-            <LinkCard href="/{translation}/{book}/1" text={book} smallList/>
+            <LinkCard href="/Bible/{translation}/{book}/1" text={book} smallList/>
         {/each}
     </div>
 </section>

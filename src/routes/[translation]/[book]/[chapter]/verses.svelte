@@ -45,7 +45,7 @@ import BackFooter from '$lib/BackFooter.svelte';
 <ol>    
     {#each verses as v}
     <li value={v}>
-        <LinkCard href="/{translation}/{book}/{chapter}?verse={v}" text={v}/>
+        <LinkCard href="/Bible/{translation}/{book}/{chapter}?verse={v}" text={v}/>
     </li>    
     {/each}
 </ol>

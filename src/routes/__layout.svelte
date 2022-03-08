@@ -67,7 +67,7 @@ import QuickLookup from '$lib/QuickLookup.svelte';
                 <QuickLookup/>
             </li>
             <li>
-                <a href="/">Home</a>
+                <a href="/Bible">Home</a>
             </li> 
         </ul>
     </nav>

@@ -3,6 +3,8 @@
 <p>
     This is the Catholic Public Domain Version (CPDV) of the Holy Bible
 </p>
+<a href="https://professorallman.github.io/Bible/">Goto the live version</a>
+
 <a href="http://www.sacredbible.org/catholic/version.htm">More information on CPDV</a>
 
 This application was written in SvelteKit.

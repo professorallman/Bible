@@ -3,7 +3,7 @@
     export let translation = 'CPDV';
     let searchQuery = '';
     function doSearch(){
-        goto(`/search/${translation}?q=${searchQuery}`);
+        goto(`/Bible/search/${translation}?q=${searchQuery}`);
         searchQuery = '';
     }
     function keypress(e){

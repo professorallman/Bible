@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-5b63d83e.js",
+    "file": "start-b622ca62.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -19,7 +19,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-f28c60de.js",
+    "file": "pages/__layout.svelte-09edfe51.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -42,7 +42,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-0a2354f5.js",
+    "file": "pages/index.svelte-82a882de.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -54,26 +54,26 @@
     ]
   },
   "src/routes/search/[translation].svelte": {
-    "file": "pages/search/_translation_.svelte-2121da61.js",
+    "file": "pages/search/_translation_.svelte-37c31124.js",
     "src": "src/routes/search/[translation].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81807408.js",
-      "_bible-94cd1b09.js"
+      "_bible-27bd8f09.js"
     ],
     "css": [
       "assets/pages/search/_translation_.svelte-84682bc4.css"
     ]
   },
   "src/routes/[translation]/index.svelte": {
-    "file": "pages/_translation_/index.svelte-537dbd9d.js",
+    "file": "pages/_translation_/index.svelte-d4dded65.js",
     "src": "src/routes/[translation]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81807408.js",
-      "_bible-94cd1b09.js",
+      "_bible-27bd8f09.js",
       "_LinkCard-d66838ba.js"
     ],
     "css": [
@@ -81,13 +81,13 @@
     ]
   },
   "src/routes/[translation]/[book]/index.svelte": {
-    "file": "pages/_translation_/_book_/index.svelte-c4bc9c80.js",
+    "file": "pages/_translation_/_book_/index.svelte-83337118.js",
     "src": "src/routes/[translation]/[book]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81807408.js",
-      "_bible-94cd1b09.js",
+      "_bible-27bd8f09.js",
       "_LinkCard-d66838ba.js"
     ],
     "css": [
@@ -95,13 +95,13 @@
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/index.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/index.svelte-1a34007e.js",
+    "file": "pages/_translation_/_book_/_chapter_/index.svelte-2fd2dbc4.js",
     "src": "src/routes/[translation]/[book]/[chapter]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81807408.js",
-      "_bible-94cd1b09.js",
+      "_bible-27bd8f09.js",
       "_navigation-13fd7038.js",
       "_singletons-d1fb5791.js"
     ],
@@ -110,13 +110,13 @@
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/verses.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-dbecb9c5.js",
+    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-f3f1baf4.js",
     "src": "src/routes/[translation]/[book]/[chapter]/verses.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-81807408.js",
-      "_bible-94cd1b09.js",
+      "_bible-27bd8f09.js",
       "_LinkCard-d66838ba.js"
     ],
     "css": [
@@ -135,8 +135,8 @@
       "_singletons-d1fb5791.js"
     ]
   },
-  "_bible-94cd1b09.js": {
-    "file": "chunks/bible-94cd1b09.js",
+  "_bible-27bd8f09.js": {
+    "file": "chunks/bible-27bd8f09.js",
     "imports": [
       "_vendor-81807408.js"
     ]

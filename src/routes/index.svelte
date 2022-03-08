@@ -17,7 +17,7 @@
     </p>
     <a href="http://www.sacredbible.org/catholic/version.htm">More information on CPDV</a>
     <p>
-        <a href="/CPDV/Genesis/1">Start at the begining</a>
+        <a href="/Bible/CPDV/Genesis/1">Start at the begining</a>
     </p>
 
 </section>

@@ -45,7 +45,7 @@
 {#each results as result }
 <section>
     <p>{@html highlight(result.verse)}</p>
-    <a href="/{translation}/{result.book}/{result.chapter}?verse={result.verseNumber}">
+    <a href="/Bible/{translation}/{result.book}/{result.chapter}?verse={result.verseNumber}">
         {result.book} {result.chapter}:{result.verseNumber}
     </a>
 </section>
