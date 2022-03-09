@@ -1,8 +1,22 @@
+<script context="module">
+    import {bibleInstance} from '$lib/bible';
+    export async function load({fetch,params}){
+        const translation = params.translation? params.translation : 'CPDV';
+        const bible = await bibleInstance(fetch,{translation});
+        return {
+            props:{bible}
+        };
+
+    }
+
+</script>
 <script>
     import { afterNavigate} from '$app/navigation';
     import { slide } from 'svelte/transition';
     import Search from '$lib/Search.svelte';
-import QuickLookup from '$lib/QuickLookup.svelte';
+    import QuickLookup from '$lib/QuickLookup.svelte';
+    export let translation;
+    export let bible;
     let show = false;
     afterNavigate(()=>show=false);
 </script>
@@ -61,10 +75,10 @@ import QuickLookup from '$lib/QuickLookup.svelte';
         </header>
         <ul>
             <li>
-                <Search/>
+                <Search translation={bible.translation}/>
             </li>
             <li>
-                <QuickLookup/>
+                <QuickLookup {bible}/>
             </li>
             <li>
                 <a href="/Bible">Home</a>

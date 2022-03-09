@@ -2,15 +2,11 @@
     import { goto } from '$app/navigation';
     export let translation = 'CPDV';
     let searchQuery = '';
-    function doSearch(){
+    function doSearch(e){
+        e.preventDefault();
         goto(`/Bible/search/${translation}?q=${searchQuery}`);
         searchQuery = '';
     }
-    function keypress(e){
-        if(e.code !== 'Enter') return;
-        doSearch();
-    }
-    
 </script>
 <style>
 label{
@@ -28,12 +24,11 @@ section{
 }
 </style>
 <section>
+<form on:submit={doSearch}>
     <label aria-label="Search">
         <span>Search:</span>
-        <input bind:value={searchQuery}
-
-                on:keypress={keypress}
-        />
+        <input bind:value={searchQuery}/>
     </label>
-    <button on:click={doSearch}>Go</button>
+    <button>Go</button>
+</form>
 </section>
