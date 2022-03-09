@@ -19,7 +19,6 @@ import LinkCard from "$lib/LinkCard.svelte";
     export let translation;
     export let books;
     let selected = 'old';
-    $: displayBook = books[selected];
 </script>
 <style>
     section{
@@ -57,6 +56,9 @@ import LinkCard from "$lib/LinkCard.svelte";
         color:white;
         background-color:var(--highlight);
     }
+    .hide{
+        display:none;
+    }
 </style>
 <svelte:head>
     <meta name="description" content="Select a book to read">    
@@ -73,8 +75,13 @@ import LinkCard from "$lib/LinkCard.svelte";
             on:click={()=>selected = 'new'}
         >New Testament</button>
     </header>
-    <div>
-        {#each displayBook as book}
+    <div class:hide={selected == 'new'}>
+        {#each books['old'] as book}
+            <LinkCard href="/Bible/{translation}/{book}/1" text={book} smallList/>
+        {/each}
+    </div>
+    <div class:hide={selected == 'old'}>
+        {#each books['new'] as book}
             <LinkCard href="/Bible/{translation}/{book}/1" text={book} smallList/>
         {/each}
     </div>
