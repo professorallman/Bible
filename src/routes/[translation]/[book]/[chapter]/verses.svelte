@@ -34,6 +34,7 @@ import BackFooter from '$lib/BackFooter.svelte';
         justify-content: center;
         margin:0;
         padding:0;
+        margin-bottom: 150px;
     }
 </style>
 <svelte:head>

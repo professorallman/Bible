@@ -1,32 +1,38 @@
 <script context="module">
-    export const prerender = false;
     import {bibleInstance} from '$lib/bible';
-    export async function load({fetch,params,url}){
-        const query = url.searchParams.get('q');
+    export async function load({fetch,params}){
         const translation = params.translation;
-        
-        if(!query) return {
-            props:{results:[]}
-        }
         const bible = await bibleInstance(fetch,{translation});
         if(!bible.translation) return {fallthrough: true}
-        const results = bible.search(query);
         return {
             props:{
+                bible,
                 translation:bible.translation,
-                results,
-                query
             }
         };
     }
 </script>
 <script>
-    export let translation;
-    export let results;
-    export let query;
+    import { afterNavigate } from '$app/navigation';
+    import { page } from '$app/stores';
+    export let bible = {search:(q)=>[]};
+    let results = []; 
+    let query = '';
+    const translation = bible.translation;
+    afterNavigate(()=>{
+        query = $page.url.searchParams.get('q');
+        results = bible.search(query);
+
+    })
     function highlight(text){
         if(!text) return;
-        return text.replace(new RegExp(query,'g'),`<strong>${query}</strong>`);
+        let result = '';
+        query.split(' ').forEach(q=>{
+            const regEx = new RegExp(q,'gi');
+            const originalCase = regEx.exec(text);
+            text = text.replace(regEx,`<strong>${originalCase}</strong>`);
+        });
+        return text;
     }
 </script>
 <style>

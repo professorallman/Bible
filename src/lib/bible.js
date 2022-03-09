@@ -119,16 +119,27 @@ class Bible{
         return verses;
     }
     search(text){
-        const statement = db.prepare(`    
-        SELECT books.name, chapters.chapter, verses.verse as verse_number, translations.verse FROM translations 
-        JOIN books ON translations.book_id=books.id
-        JOIN chapters ON  translations.chapter_id=chapters.id
-        JOIN verses ON translations.verse_id=verses.id 
-        WHERE translations.verse LIKE :search_term
-        AND translations.translation_id = :translation_id
+        const terms = text.split(' ');
+        let statementString = `SELECT books.name, chapters.chapter, verses.verse as verse_number, translations.verse FROM translations 
+                                JOIN books ON translations.book_id=books.id
+                                JOIN chapters ON  translations.chapter_id=chapters.id
+                                JOIN verses ON translations.verse_id=verses.id 
+                                WHERE
+                                `;
+        let params = {':translation_id':this._translation_id};
+        terms.forEach((term,i)=>{
+            params[`:search_term${i}`] = `%${term}%`;
+            statementString += `
+                   translations.verse LIKE :search_term${i} AND
+            `;
+        });
+        statementString += `
+        translations.translation_id = :translation_id
         ORDER BY books.name,chapters.chapter,verses.verse
-        `);
-        statement.bind({':search_term':`%${text}%`,':translation_id':this._translation_id});
+        `;
+        console.log(statementString,params);
+        const statement = db.prepare(statementString);
+        statement.bind(params);
         const results = [];
         while(statement.step()){
             const [book,chapter,verseNumber,verse] = statement.get();
