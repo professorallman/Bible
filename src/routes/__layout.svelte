@@ -15,7 +15,6 @@
     import { slide } from 'svelte/transition';
     import Search from '$lib/Search.svelte';
     import QuickLookup from '$lib/QuickLookup.svelte';
-    export let translation;
     export let bible;
     let show = false;
     afterNavigate(()=>show=false);

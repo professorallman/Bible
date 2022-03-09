@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-72591733.js",
+    "file": "start-6cea63e0.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
+      "_vendor-21bd5755.js",
       "_singletons-d1fb5791.js"
     ],
     "dynamicImports": [
@@ -19,12 +19,13 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-500555af.js",
+    "file": "pages/__layout.svelte-9c89e844.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
       "_navigation-13fd7038.js",
       "_singletons-d1fb5791.js"
     ],
@@ -33,36 +34,36 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-7dec860a.js",
+    "file": "error.svelte-f3f221d0.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js"
+      "_vendor-21bd5755.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-4542f8ac.js",
+    "file": "pages/index.svelte-4e191979.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js"
+      "_vendor-21bd5755.js"
     ],
     "css": [
       "assets/pages/index.svelte-eb7f4bad.css"
     ]
   },
   "src/routes/search/[translation].svelte": {
-    "file": "pages/search/_translation_.svelte-fb98255a.js",
+    "file": "pages/search/_translation_.svelte-aa2fdfd4.js",
     "src": "src/routes/search/[translation].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
-      "_bible-65df50b4.js",
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
       "_navigation-13fd7038.js",
-      "_stores-26fe132a.js",
+      "_stores-aa1eef4a.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
@@ -70,43 +71,43 @@
     ]
   },
   "src/routes/[translation]/index.svelte": {
-    "file": "pages/_translation_/index.svelte-5f29e304.js",
+    "file": "pages/_translation_/index.svelte-712e5a53.js",
     "src": "src/routes/[translation]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
-      "_bible-65df50b4.js",
-      "_LinkCard-dd19c52a.js"
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
+      "_LinkCard-3f1ad777.js"
     ],
     "css": [
       "assets/pages/_translation_/index.svelte-366fd5f8.css"
     ]
   },
   "src/routes/[translation]/[book]/index.svelte": {
-    "file": "pages/_translation_/_book_/index.svelte-1685cce8.js",
+    "file": "pages/_translation_/_book_/index.svelte-80972ff8.js",
     "src": "src/routes/[translation]/[book]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
-      "_bible-65df50b4.js",
-      "_LinkCard-dd19c52a.js"
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
+      "_LinkCard-3f1ad777.js"
     ],
     "css": [
       "assets/pages/_translation_/_book_/index.svelte-b6bcd302.css"
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/index.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/index.svelte-a98e92d4.js",
+    "file": "pages/_translation_/_book_/_chapter_/index.svelte-0631d583.js",
     "src": "src/routes/[translation]/[book]/[chapter]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
-      "_bible-65df50b4.js",
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
       "_navigation-13fd7038.js",
-      "_stores-26fe132a.js",
+      "_stores-aa1eef4a.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
@@ -114,24 +115,30 @@
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/verses.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-be852c83.js",
+    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-820cfc95.js",
     "src": "src/routes/[translation]/[book]/[chapter]/verses.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-94cb3b7b.js",
-      "_bible-65df50b4.js",
-      "_LinkCard-dd19c52a.js"
+      "_vendor-21bd5755.js",
+      "_bible-a3a33fc4.js",
+      "_LinkCard-3f1ad777.js"
     ],
     "css": [
       "assets/pages/_translation_/_book_/_chapter_/verses.svelte-922852a9.css"
     ]
   },
-  "_vendor-94cb3b7b.js": {
-    "file": "chunks/vendor-94cb3b7b.js"
+  "_vendor-21bd5755.js": {
+    "file": "chunks/vendor-21bd5755.js"
   },
   "_singletons-d1fb5791.js": {
     "file": "chunks/singletons-d1fb5791.js"
+  },
+  "_bible-a3a33fc4.js": {
+    "file": "chunks/bible-a3a33fc4.js",
+    "imports": [
+      "_vendor-21bd5755.js"
+    ]
   },
   "_navigation-13fd7038.js": {
     "file": "chunks/navigation-13fd7038.js",
@@ -139,22 +146,16 @@
       "_singletons-d1fb5791.js"
     ]
   },
-  "_bible-65df50b4.js": {
-    "file": "chunks/bible-65df50b4.js",
+  "_stores-aa1eef4a.js": {
+    "file": "chunks/stores-aa1eef4a.js",
     "imports": [
-      "_vendor-94cb3b7b.js"
+      "_vendor-21bd5755.js"
     ]
   },
-  "_stores-26fe132a.js": {
-    "file": "chunks/stores-26fe132a.js",
+  "_LinkCard-3f1ad777.js": {
+    "file": "chunks/LinkCard-3f1ad777.js",
     "imports": [
-      "_vendor-94cb3b7b.js"
-    ]
-  },
-  "_LinkCard-dd19c52a.js": {
-    "file": "chunks/LinkCard-dd19c52a.js",
-    "imports": [
-      "_vendor-94cb3b7b.js"
+      "_vendor-21bd5755.js"
     ],
     "css": [
       "assets/LinkCard-d997a096.css"
