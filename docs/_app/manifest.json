@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-53a2147d.js",
+    "file": "start-c6477680.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
+      "_vendor-aa83f43d.js",
       "_singletons-d1fb5791.js"
     ],
     "dynamicImports": [
@@ -13,19 +13,20 @@
       "src/routes/index.svelte",
       "src/routes/search/[translation].svelte",
       "src/routes/[translation]/index.svelte",
+      "src/routes/[translation]/RandomVerse.svelte",
       "src/routes/[translation]/[book]/index.svelte",
       "src/routes/[translation]/[book]/[chapter]/index.svelte",
       "src/routes/[translation]/[book]/[chapter]/verses.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-9c89e844.js",
+    "file": "pages/__layout.svelte-cf1b7f89.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
       "_navigation-13fd7038.js",
       "_singletons-d1fb5791.js"
     ],
@@ -34,36 +35,36 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-f3f221d0.js",
+    "file": "error.svelte-1c6354b8.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js"
+      "_vendor-aa83f43d.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-e165ece5.js",
+    "file": "pages/index.svelte-ade3c0b1.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js"
+      "_vendor-aa83f43d.js"
     ],
     "css": [
       "assets/pages/index.svelte-eb7f4bad.css"
     ]
   },
   "src/routes/search/[translation].svelte": {
-    "file": "pages/search/_translation_.svelte-aa2fdfd4.js",
+    "file": "pages/search/_translation_.svelte-36f30ca3.js",
     "src": "src/routes/search/[translation].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
       "_navigation-13fd7038.js",
-      "_stores-aa1eef4a.js",
+      "_stores-d5ab0c08.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
@@ -71,43 +72,56 @@
     ]
   },
   "src/routes/[translation]/index.svelte": {
-    "file": "pages/_translation_/index.svelte-712e5a53.js",
+    "file": "pages/_translation_/index.svelte-1fc69a87.js",
     "src": "src/routes/[translation]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
-      "_LinkCard-3f1ad777.js"
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
+      "_LinkCard-67510164.js"
     ],
     "css": [
       "assets/pages/_translation_/index.svelte-366fd5f8.css"
     ]
   },
+  "src/routes/[translation]/RandomVerse.svelte": {
+    "file": "pages/_translation_/RandomVerse.svelte-bd21ae33.js",
+    "src": "src/routes/[translation]/RandomVerse.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js"
+    ],
+    "css": [
+      "assets/pages/_translation_/RandomVerse.svelte-4b0b17c1.css"
+    ]
+  },
   "src/routes/[translation]/[book]/index.svelte": {
-    "file": "pages/_translation_/_book_/index.svelte-80972ff8.js",
+    "file": "pages/_translation_/_book_/index.svelte-09f603ac.js",
     "src": "src/routes/[translation]/[book]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
-      "_LinkCard-3f1ad777.js"
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
+      "_LinkCard-67510164.js"
     ],
     "css": [
       "assets/pages/_translation_/_book_/index.svelte-b6bcd302.css"
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/index.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/index.svelte-0631d583.js",
+    "file": "pages/_translation_/_book_/_chapter_/index.svelte-33aac755.js",
     "src": "src/routes/[translation]/[book]/[chapter]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
       "_navigation-13fd7038.js",
-      "_stores-aa1eef4a.js",
+      "_stores-d5ab0c08.js",
       "_singletons-d1fb5791.js"
     ],
     "css": [
@@ -115,29 +129,29 @@
     ]
   },
   "src/routes/[translation]/[book]/[chapter]/verses.svelte": {
-    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-820cfc95.js",
+    "file": "pages/_translation_/_book_/_chapter_/verses.svelte-617989e1.js",
     "src": "src/routes/[translation]/[book]/[chapter]/verses.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-21bd5755.js",
-      "_bible-a3a33fc4.js",
-      "_LinkCard-3f1ad777.js"
+      "_vendor-aa83f43d.js",
+      "_bible-40837f4a.js",
+      "_LinkCard-67510164.js"
     ],
     "css": [
       "assets/pages/_translation_/_book_/_chapter_/verses.svelte-922852a9.css"
     ]
   },
-  "_vendor-21bd5755.js": {
-    "file": "chunks/vendor-21bd5755.js"
+  "_vendor-aa83f43d.js": {
+    "file": "chunks/vendor-aa83f43d.js"
   },
   "_singletons-d1fb5791.js": {
     "file": "chunks/singletons-d1fb5791.js"
   },
-  "_bible-a3a33fc4.js": {
-    "file": "chunks/bible-a3a33fc4.js",
+  "_bible-40837f4a.js": {
+    "file": "chunks/bible-40837f4a.js",
     "imports": [
-      "_vendor-21bd5755.js"
+      "_vendor-aa83f43d.js"
     ]
   },
   "_navigation-13fd7038.js": {
@@ -146,16 +160,16 @@
       "_singletons-d1fb5791.js"
     ]
   },
-  "_stores-aa1eef4a.js": {
-    "file": "chunks/stores-aa1eef4a.js",
+  "_stores-d5ab0c08.js": {
+    "file": "chunks/stores-d5ab0c08.js",
     "imports": [
-      "_vendor-21bd5755.js"
+      "_vendor-aa83f43d.js"
     ]
   },
-  "_LinkCard-3f1ad777.js": {
-    "file": "chunks/LinkCard-3f1ad777.js",
+  "_LinkCard-67510164.js": {
+    "file": "chunks/LinkCard-67510164.js",
     "imports": [
-      "_vendor-21bd5755.js"
+      "_vendor-aa83f43d.js"
     ],
     "css": [
       "assets/LinkCard-d997a096.css"

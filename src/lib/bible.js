@@ -137,7 +137,6 @@ class Bible{
         translations.translation_id = :translation_id
         ORDER BY books.name,chapters.chapter,verses.verse
         `;
-        console.log(statementString,params);
         const statement = db.prepare(statementString);
         statement.bind(params);
         const results = [];
@@ -148,6 +147,23 @@ class Bible{
         }
         return results;
 
+    }
+    random(number){
+        let statementString = `SELECT translations.id, books.name, chapters.chapter, verses.verse as verse_number, translations.verse FROM translations 
+        JOIN books ON translations.book_id=books.id
+        JOIN chapters ON  translations.chapter_id=chapters.id
+        JOIN verses ON translations.verse_id=verses.id 
+        ORDER BY random() LIMIT :limit_number;
+        WHERE translations.translation_id = :translation_id 
+        `;
+        const statement = this._db.prepare(statementString);
+        statement.bind({':translation':this.translation,':limit_number':number});
+        const results = [];
+        while(statement.step()){
+            const [id,book,chapter,verseNumber,verse] = statement.get();
+            results.push({id,book,chapter,verseNumber,verse});
+        }
+        return results;
     }
 }
 

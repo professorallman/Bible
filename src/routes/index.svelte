@@ -19,6 +19,8 @@
     <p>
         <a href="/Bible/CPDV/Genesis/1">Start at the beginning</a>
         <a href="/Bible/search/CPDV" style="display:none">The Searchpage</a>
+        <br/>
+        <a href="/Bible/CPDV/RandomVerse">Random verse generator</a>
     </p>
 
 </section>
